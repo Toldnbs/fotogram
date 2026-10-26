@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotogram</title>
+  <link rel="icon" href="./icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js"></script>
+</head>
+
+<body onload="init()">
+  <header class="page-header">
+    <img class="logo" src="./icons/logo.svg" alt="Fotogram Logo">
+  </header>
+
+  <main>
+    <h1>Your personal photo album</h1>
+    <section class="gallery" id="gallery"></section>
+  </main>
+
+  <footer>
+    <img class="footer-logo" src="./icons/developer-akademie.svg" alt="Developer Akademie Logo">
+    <p>© 2023 Developer Akademie GmbH</p>
+  </footer>
+
+  <dialog class="dialog" id="dialog" onclick="closeDialog()">
+    <div class="dialog-content" onclick="preventClose(event)">
+      <header class="dialog-header">
+        <h2 id="dialog-title">Alaska</h2>
+        <button class="close-button" onclick="closeDialog()" aria-label="Close">
+          <img src="./icons/close.svg" alt="">
+        </button>
+      </header>
+
+      <img class="dialog-image" id="dialog-image" src="./img/alaska.webp" alt="Alaska">
+
+      <div class="dialog-footer">
+        <button class="arrow-button" onclick="previousImage()" aria-label="Previous image">
+          <img src="./icons/arrow-left.svg" alt="">
+        </button>
+        <p class="image-number" id="image-number">1/12</p>
+        <button class="arrow-button" onclick="nextImage()" aria-label="Next image">
+          <img src="./icons/arrow-right.svg" alt="">
+        </button>
+      </div>
+    </div>
+  </dialog>
+</body>
+
+</html>
